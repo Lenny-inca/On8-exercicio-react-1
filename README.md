@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+# Voltei, On8! Hoje é dia de react, BB!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chegou a semana 14! E vamos aprender um dos conteúdos mais queridinhos do mercado, o react. 
 
-## Available Scripts
+Vamos conhecer um pouco do universo dessa ferramenta incrível, os conceitos fundamentais e criar nossos primeiros projetinhos. 
 
-In the project directory, you can run:
+Nossa aula será dividida em duas partes:
 
-### `yarn start`
+1- Conceitos e primeiros passos com react ❤️ <br>
+2- Partiu codar 🚀
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+E como sempre, após esse momento de treino e de tira-dúvidas irei passar nossa tarefinha de casa!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## O que é react?
 
-### `yarn build`
+É uma ferramenta que nasceu no Facebook para sincronizar as diferentes informações/atualizações que aconteciam na tela! 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Além disso, se tornou bastante popular devido ao fato de permitir o reuso de componentes, fácil manutenção no código e alta performance.😃
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Olha aqui a documentação oficial do [React](https://pt-br.reactjs.org/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Biblioteca ou Framework?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React é uma biblioteca para criação de interface de usuários.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Framework é uma coleção de bibliotecas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A diferença fica explícita quando percebemos que ao usar uma lib/biblioteca podemos usar em parte do projeto e ainda refatorar para excluir a lib e o projeto continua. Já na utilização de frameworks a gente precisaria reiniciar o projeto do zero.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Quem usa react?
 
-## Learn More
+Facebook, Twitter, WhatsApp, Netflix, AirBnB e em muitas outras gigantes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Fundamentos e Primeiros passos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Mentalidade react:**
 
-### Code Splitting
+Vou te provar que você já sabe react, só nunca usou. rs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Você já sabe HTML e javascript, certo? 
 
-### Analyzing the Bundle Size
+Existe uma grande semelhança de HTML e Javascript com o comportamento/funcionamento dos componentes de react.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+E a boa notícia: componente é a base do react.
 
-### Making a Progressive Web App
+**A tríade do react:**
+* Visual: o retorno dos elementos nos componentes
+* Funcional: as funções de javascript que dão vida aos componentes
+* Estado: Cria o poder de memória nos componentes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Dicionário react:**
 
-### Advanced Configuration
+* JSX: XML + Javascript, uma sintaxe que você vai estranhar no início, mas que facilita muito nossa vida. É html dentro do javascript.<br>
+* Elemento: tags html que retornam de um componente
+* Componente: códigos isolados, independentes e reutilizáveis, podem ser funcões ou classes.
+* SPA: Single page application que esse conceito de gerar experiência para os usuários, atualizando partes do código em vez da página inteira.
+* Props: propriedades que passamos para componentes
+* Estado: memória para manipular dados em componentes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Hello World com react
 
-### Deployment
+#### Criando meu primeiro projeto
+`npx create-react-app`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Renderizando elementos
 
-### `yarn build` fails to minify
+Como o react faz para mostrar todos os elementos e componentes na tela?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Vamos ver o ReactDOM.render()
+
+#### Arquitetura
+Agora, vamos pensar sobre uma estrutura de pastas que seja recomendada para nosso projeto em react. Importante lembrar que não precisamos criar todas as pastas, elas surgem automaticamente quando usamos o npx create-react-app.
+
+#### 📂node_modules
+>  Aqui ficam salvos todos os pacotes de dependências que precisamos para fazer a sintaxe react funcionar.  
+
+#### 📂public
+>**index.html**<br>
+> Aqui está nosso html que recebe todos os códigos para mostrar na tela.
+
+#### 📂src
+> **index.js**<br>
+>Aqui ficam as principais importações do react e o ReactDOM.render() que é responsável por mandar nossos componentes para o html.
+
+> **app.js** <br>
+> Aqui fica nosso principal componente, que centraliza as outras funcionalidades/páginas.
+
+>>📂Components<br>
+> Aqui criamos nossos arquivos de componentes. :)
+
+>>📂Pages<br>
+> Aqui criamos nossos arquivos de páginas que recebem os componentes.
+
+>>📂Route<br>
+> Aqui criamos o arquivo de navegação das nossas páginas.
+
+>>📂Services<br>
+> Aqui criamos os arquivos onde podemos consumir dados de api.
+
+>>📂Styles<br>
+> Aqui podemos criar todos os estilos de nossos arquivos, desde o global que importamos para o app.js, até por component ou por page que importamos em cada arquivo relacionado.
+
+>>📂Assets<br>
+> Aqui salvamos todos os arquivos de imagens.
+
+
+### Props
+
+Propriedades ou props é um objeto javascript que passamos como parâmetro para componentes. São as props que nos permite reutilzar components e renderizar diferentes dados em cada um deles.
+
+Como no HTML passamos as props como atributos de tags.
+
+
+
+#### Children
+
+Children é uma propriedade do objeto props.
+E assim como no HTML, temos as divs mães que criam uma hierarquia com os elementos filhos. Usando o children podemos modificar dados entre as tags de fechamento e abertura de um elemento. 
+
+
+
+
+<br>
+
+
+
+**Exemplos:**
+
+| Recurso | Descrição |
+| --- | --- |
+| `Hello world` | Utilizando o ReactDOM.render(), vamos renderizar o Hello World! |
+
+| Recurso | Descrição |
+| --- | --- |
+| `Hello world` | Agora no App vamos renderizar o Hello World! |
+
+| Recurso | Descrição |
+| --- | --- |
+| `Hello world` |  Agora vamos criar um componente Hello e passar por props o nosso Hello World|
+
+| Recurso | Descrição |
+| --- | --- |
+| `UpperCase` |  Agora vamos criar um componente UpperCase que transforma em CapsLock qualquer texto passado por props. |
+
+| Recurso | Descrição |
+| --- | --- |
+| `UpperCase` |  Agora vamos criar um componente UpperCase que transforma em CapsLock qualquer texto passado por children.|
+
+| Recurso | Descrição |
+| --- | --- |
+| `Tick` |  Vamos criar um componente que retorna nosso horário local|
+
+| Recurso | Descrição |
+| --- | --- |
+| `Imagem` |  Vamos aprender como trabalhar com imagens, criando um componente que recebe um nome e uma imagem. E depois renderizar na tela esse card.|
+
+| Recurso | Descrição |
+| --- | --- |
+| `Cards` | Vamos usar dados de um arquivo interno que simula um JSON para renderizar alguns cards na tela|
+
+| Recurso | Descrição |
+| --- | --- |
+| `Lista` | Vamos usar dados de um arquivo interno que simula um JSON para renderizar uma lista na tela|
+
+
+
+---
+**Desafio:**
+
+#### Calma! É só mais uma TAREFINHA DE CASA pra chamar de sua! Já treinamos bastante com nossos exemplos na aula!
+
+
+Vamos criar um projetinho react do zero com direito a componetização, consumo de dados internos e uso de props.
+
+
+
+> Passo a passo:
+1) Crie um projeto react
+2) Apague as informações default
+3) Crie e exporte um arquivo que simula um JSON
+4) Crie um componente título que recebe o texto: "Meu Primeiro Projeto React do Zero", a ser renderizado por props ou children
+5) Crie um outro componente que mapeia os dados do arquivo que simula o JSON e retorna em elementos que devem ser renderizados na tela. Os dados devem conter 4 chaves e valores: id, nome, descrição e imagem.
+6) Import no App.js os componentes criados, perceba os erros/warnings que o terminal/console mostra, resolva e faça todos os componentes renderizar na tela 
+7) Suba esse projeto no github, atualize o read me contando tudo o que você aprendeu e usou. Iremos disponibilizar uma planilha para a entrega dos links dos repos. A entrega pode ser feita até sexta 13/11.
+8) Tente fazer entre domingo e terça, para aproveitar a aula de quarta e monitorias pra tirar dúvidas.
+9) Arraseee! E qualquer coisa, me chama!
+
+
+## Simara Conceição
+- [instagram](https://www.instagram.com/simara_conceicao)
+- [linkedin](https://www.linkedin.com/in/simaraconceicao/)
+- [github](https://github.com/simaraconceicao)
+- [spotify](https://open.spotify.com/show/59vCz4TY6tPHXW26qJknh3)
+- [quero ser dev](https://queroserdev.com)
+- email: contato@simaraconceicao.com
